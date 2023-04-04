@@ -21,5 +21,9 @@
     c.arc(200, 200, 30, 0, Math.PI * 2, false );
     c.strokeStyle = "pink";
     c.stroke();
+    const animate = () => {
+    requestAnimationFrame(animate)
+}
+animate()
 </script>
 </html>
