@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sharewar/public_html
+    - /bin/cp -rf * $DEPLOYPATH
+  app_root: $DEPLOYPATH
