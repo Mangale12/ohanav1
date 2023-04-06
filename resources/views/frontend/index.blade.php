@@ -325,7 +325,7 @@
                         <input type="text" name="first_name" class="form-control" id="name" placeholder="Your First Name" required>
                      </div>
                      <div class="col-md-6 form-group mt-3 mt-md-0">
-                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Your Email" required>
+                        <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Your Last Name" required>
                      </div>
                   </div>
                   <div class="row">
@@ -336,12 +336,12 @@
                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
                     </div>
                  </div>
-                  {{-- <div class="form-group mt-3">
+                  <div class="form-group mt-3">
                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
                   </div>
                   <div class="form-group mt-3">
                      <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                  </div> --}}
+                  </div>
                   <div class="my-3">
                      <div class="loading">Loading</div>
                      <div class=""></div>
