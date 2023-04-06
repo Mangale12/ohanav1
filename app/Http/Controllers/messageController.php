@@ -39,9 +39,11 @@ class messageController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'name'=>'required',
+            'first_name'=>'required',
+            'last_name'=>'required',
             'subject'=>'required|max:255',
-            'email'=>'required',
+            'email'=>'required|email',
+            'phone'=>'required|numeric|max:10|min:10',
             'message'=>'required'
         ]);
         // dd(Auth::user()->email);
@@ -51,7 +53,9 @@ class messageController extends Controller
             $request->file->storeAs('files',$filename);
             $message->file=$filename;
         }
-        $message->name=$request->name;
+        $message->first_name=$request->first_name;
+        $message->last_name=$request->last_name;
+        $message->phone=$request->phone;
         $message->subject=$request->subject;
         $message->email=$request->email;
         $message->message=$request->message;
@@ -63,10 +67,8 @@ class messageController extends Controller
             'email' => $request->email,
             'text'=>$request->message,
         ];
-        // dd($mailData);
-        // $user['to']=[$request->email,'mangaletamang65@gmail.com'];
         $user['to']=$request->email;
-        $user['from']='mangaletamang65@gmail.com';
+        $user['from']='mangal12@sharewarenepal.com';
         Mail::send('frontend/mail',$mailData,function($message) use ($user) {
             $message->to($user['to']);
             $message->subject('Mail From Client');

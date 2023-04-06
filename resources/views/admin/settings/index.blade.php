@@ -12,6 +12,11 @@
                         <form action="{{ route('updateSettings') }}" class="form-image-upload" method="POST"
                               enctype="multipart/form-data">
                             {{ csrf_field() }}
+                            <!--<div class="form-group">-->
+                            <!--    <strong>Nav Icon</strong>-->
+                            <!--    <input type="file" name="nav_icon" class="form-control"-->
+                            <!--           placeholder="Plese Choose Icon">-->
+                            <!--</div>-->
                             <div class="form-group">
                                 <strong>Company Name</strong>
                                 <input type="text" name="company_name" class="form-control"

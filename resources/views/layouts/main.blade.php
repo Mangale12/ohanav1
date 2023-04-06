@@ -4,6 +4,7 @@
     <!DOCTYPE html>
 <html lang="en">
     <title>{{$settings->company_name}}</title>
+    <link rel="icon" type="image/x-icon" href="{{asset($settings->company_image)}}">
     <meta property="og:url" content="{{URL::to('/')}}"/>
     <meta property="og:type" content="construction"/>
     <meta property="og:title" content="{{$settings->company_name}}"/>
@@ -23,22 +24,21 @@
 
     <!-- Template Main CSS File -->
     <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/css/style.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/aos/aos.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/boxicons/css/boxicons.min.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/remixicon/remixicon.css') }}" type="text/css" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/css/style.css') }}" type="text/css" rel="stylesheet">
+    <!--<link href="{{ asset('public/assets/vendor/aos/aos.css') }}" type="text/css" rel="stylesheet">-->
+    <link href="{{ asset('public/assets/vendor/bootstrap/css/bootstrap.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/boxicons/css/boxicons.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/glightbox/css/glightbox.min.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/remixicon/remixicon.css') }}" type="text/css" rel="stylesheet">
+    <link href="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.css') }}" type="text/css" rel="stylesheet">
 
-  <!-- Vendor JS Files -->
-  <script src="{{ asset('assets/vendor/purecounter/purecounter.js') }}"></script>
-  <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
-  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-  <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/purecounter/purecounter.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('public/assets/vendor/php-email-form/validate.js') }}"></script>
   <script src="https://kit.fontawesome.com/00f1153250.js" crossorigin="anonymous"></script>
 
   <!-- Template Main JS File -->

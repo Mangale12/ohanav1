@@ -25,6 +25,7 @@ use Illuminate\Support\Facades\DB;
 class siteController extends Controller
 {
     public function index(){
+        // dd('hello');
         $members=member::all();
         $partners=partner::all();
         $sliders=slider::all();

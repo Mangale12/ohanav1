@@ -54,6 +54,7 @@ class adminController extends Controller
 
             $settings->company_image = $full_name;
         }
+        
         $settings->about = $request->about;
         $settings->company_vision = $request->company_vision;
         $settings->company_mission = $request->company_mission;
@@ -79,7 +80,12 @@ class adminController extends Controller
             'email' => 'required',
             'phone_number' => 'required',
         ]);
-
+        if($request->hasFile('nav_icon')){
+            $icon = $request->file('nav_icon');
+            $icon_name = hexdec(uniqid()) . '.' . $icon->getClientOriginalExtension();
+            $icon->move(public_path('media/'),$icon_name);
+            $settings->nav_icon = $icon_name;
+        }
         $settings->company_name = $request->company_name;
         $settings->company_location = $request->company_location;
         $settings->email = $request->email;
