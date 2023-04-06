@@ -33,9 +33,9 @@ class serviceController extends Controller
         $service->service=$request->service;
         if($image!==null){
             $image_name = hexdec(uniqid()) . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('media/service/'),$image_name);
+            // $image->move(public_path('media/service/'),$image_name);
             $full_name = 'public/media/service/' . $image_name;
-            // Image::make($image)->resize(500,500)->save($full_name);
+            Image::make($image)->resize(500,500)->save($full_name);
 
             $service->image = $image_name;
         }

@@ -168,8 +168,8 @@
             </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{route('our-services.index')}}"><i class="fa fa-circle-o"></i>View All Service</a></li>
-                    <li><a href="{{route('our-services.create')}}"><i class="fa fa-circle-o"></i>Add New Service</a></li>
+                    <li><a href="{{route('services')}}"><i class="fa fa-circle-o"></i>View All Service</a></li>
+                    <li><a href="{{route('addService')}}"><i class="fa fa-circle-o"></i>Add New Service</a></li>
                 </ul>
 
             </li>

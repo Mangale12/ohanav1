@@ -216,14 +216,14 @@ Route::get('admin/editHistory/{id}', ['middleware' => 'auth','uses'=>'App\Http\C
 Route::post('admin/updateHistory/{id}', ['middleware' => 'auth','uses'=>'App\Http\Controllers\historyController@updateHistory'])->name('updateHistory');
 
 
-Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function () {
-    //Home banner
-    Route::get('homebanner/index',[HomeBannerController::class,'index'])->name('homebanner.index');
-    Route::patch('homebanner/index',[HomeBannerController::class,'update'])->name('homebanner.update');
+// Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function () {
+//     //Home banner
+//     Route::get('homebanner/index',[HomeBannerController::class,'index'])->name('homebanner.index');
+//     Route::patch('homebanner/index',[HomeBannerController::class,'update'])->name('homebanner.update');
 
-    // Our Service
-    Route::resource('our-services', OurServiceController::class);
-    Route::get('our-service/status',[OurServiceController::class, 'status'])->name('our-service.status');
-});
+//     // Our Service
+//     Route::resource('our-services', serviceController::class);
+//     Route::get('our-service/status',[OurServiceController::class, 'status'])->name('our-service.status');
+// });
 
 

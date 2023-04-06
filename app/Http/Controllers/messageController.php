@@ -66,7 +66,7 @@ class messageController extends Controller
         // dd($mailData);
         // $user['to']=[$request->email,'mangaletamang65@gmail.com'];
         $user['to']=$request->email;
-        $user['from']='mangaletamang65@gmail.com';
+        $user['from']='mangal12@sharewarenepal.com';
         Mail::send('frontend/mail',$mailData,function($message) use ($user) {
             $message->to($user['to']);
             $message->subject('Mail From Client');
