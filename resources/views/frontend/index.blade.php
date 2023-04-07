@@ -323,24 +323,42 @@
                   <div class="row">
                      <div class="col-md-6 form-group">
                         <input type="text" name="first_name" class="form-control" id="name" placeholder="Your First Name" required>
+                        @error('firs_tname')
+                        <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                      </div>
                      <div class="col-md-6 form-group mt-3 mt-md-0">
                         <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Your Last Name" required>
+                        @error('last_name')
+                        <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                      </div>
                   </div>
                   <div class="row">
                     <div class="col-md-6 form-group">
                        <input type="text" name="phone" class="form-control" id="phone" placeholder="Your Phone" required>
+                       @error('phone')
+                        <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                     <div class="col-md-6 form-group mt-3 mt-md-0">
                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                       @error('email')
+                        <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                     </div>
                  </div>
                   <div class="form-group mt-3">
                      <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                     @error('subject')
+                        <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                   </div>
                   <div class="form-group mt-3">
                      <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                     @error('message')
+                        <div class="error text-danger">{{ $message }}</div>
+                        @enderror
                   </div>
                   <div class="my-3">
                      <div class="loading">Loading</div>

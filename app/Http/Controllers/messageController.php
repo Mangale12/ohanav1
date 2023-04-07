@@ -46,6 +46,7 @@ class messageController extends Controller
             'phone'=>'required|numeric|max:10|min:10',
             'message'=>'required'
         ]);
+
         // dd(Auth::user()->email);
         $message=new message();
         if($request->hasFile('file')){
@@ -53,13 +54,13 @@ class messageController extends Controller
             $request->file->storeAs('files',$filename);
             $message->file=$filename;
         }
-        $message->first_name=$request->first_name;
-        $message->last_name=$request->last_name;
-        $message->phone=$request->phone;
-        $message->subject=$request->subject;
-        $message->email=$request->email;
-        $message->message=$request->message;
-        $message->save();
+        // $message->first_name=$request->first_name;
+        // $message->last_name=$request->last_name;
+        // $message->phone=$request->phone;
+        // $message->subject=$request->subject;
+        // $message->email=$request->email;
+        // $message->message=$request->message;
+        // $message->save();
 
         $mailData = [
             'name'  => $request->name,
@@ -77,6 +78,22 @@ class messageController extends Controller
             $message->to($user['from']);
             $message->subject('Mail From Client');
         });
+
+        //message
+        $basic  = new \Vonage\Client\Credentials\Basic("4aa19219", "3cqqCEGzPXfsjtXG");
+        $client = new \Vonage\Client($basic);
+        $response = $client->sms()->send(
+            new \Vonage\SMS\Message\SMS("9779849649679",  "APP_NAME", 'A text message sent using the Nexmo SMS API')
+        );
+
+        $message = $response->current();
+        if ($message->getStatus() == 0) {
+            echo "The message was sent successfully\n";
+            die;
+        } else {
+            echo "The message failed with status: " . $message->getStatus() . "\n";
+            die;
+        }
         return redirect()->back()->with('message','message Sent Successfully');
     }
 
